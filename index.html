@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>TEST GPS</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col text-center">
+                    <h1>TEST GPS</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center">
+                    lat: <p id='lat'></p>
+                </div>
+                <div class="col text-center">
+                    lon: <p id='lon'></p>
+                </div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script>
+            function success(position) {
+                const latitude  = position.coords.latitude
+                const longitude = position.coords.longitude
+                $("#lat").html(latitude)
+                $("#lon").html(longitude)
+            }
+
+            function error() {
+                console.log('Unable to retrieve your location')
+            }
+            console.log(navigator.geolocation)
+            navigator.geolocation.getCurrentPosition(success, error)
+        </script>
+    </body>
+</html>

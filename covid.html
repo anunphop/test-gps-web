@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<head>
+
+<style>
+#AdA_1pcBelow {display: none!important;} /* CLOSE ADS ANYMINE */
+.news-box .news-item .caption .cat, .news-box .news-item .caption .cat a {display: none;}
+
+.bg-coronavirus {
+    /*background-image: url(https://thestandard.co/wp-content/uploads/2020/01/bg-oscars2020-v2-scaled.jpg);*/
+    background-color: #373737;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+}
+
+.slide-container {position:relative; width: 100%; max-width: 1920px; margin: 0 auto 1em; background-color: #FFF;}
+.tabbar {background-color: #373737; border-top: 8px solid #bf1c22; padding: 8px 0 5px; text-align: center; color: #FFF; font: 900 normal 2.65rem/1.2 'Kanit'; letter-spacing: 1px;}
+.tabbar-logo {max-width: 80px; margin-top: -70px; margin-left: 25px;}
+
+header.headline {text-transform: uppercase; padding-top: 20px; font-size: 30pt; text-align: center;font: 500 normal 2.5rem/1 'Kanit'; color: #FFF;}
+header.bdt {border-top: 10px solid #ececec;}
+.grid-3block .alm-reveal {align-items: center;}
+
+#coronavirus-podcast .newsbox-small .news-item {margin-bottom: 0px!important;}
+.newsbox-large .news-item {border-top: solid 0px #666;}
+.newsbox-large .news-item .caption, .newsbox-small .news-item .caption {background: none!important;}
+.newsbox-large .news-item .caption .caption-title a,
+.newsbox-small .news-item .caption .caption-title a {color: #FFF;}
+.news-box .news-item .caption .cat,
+.news-box .news-item .caption .cat a {color: #bf1c22!important; text-decoration: none;}
+.news-box .news-item .caption .news-title {font-weight: 400;}
+.newsbox-large .news-item .caption .news-title,
+.newsbox-small .news-item .caption .news-title, .newsbox-thumb.-small .news-item .caption .news-title {font-size: 1.25em;}
+@media screen and (max-width: 767px){
+    /*.newsbox-large .news-item .caption .news-title,
+    .newsbox-small .news-item .caption .news-title, .newsbox-thumb.-small .news-item .caption .news-title {font-size: 1em!important;}
+    .newsbox-small .news-item .caption .news-title, .newsbox-thumb.-small .news-item .caption .news-title {
+        height: 4em!important;}*/
+    .news-box .news-item .caption .news-title,
+    .related-stories .news-item .caption .caption-title .news-title {font-weight: 300;}
+    .caption .news-title a {max-height: 4em!important;}
+}
+.alm-btn-wrap {padding: 20px 0!important;}
+
+
+figure.thumb {position: relative;}
+#coronavirus-video .news-item figure.thumb a:before {
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: solid 2px #FFF;
+    background: url(https://thestandard.co/wp-content/themes/thestandard.v3/assets/img/play-icon.png) center center no-repeat;
+    background-size: contain;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    position: absolute;
+    z-index: 1;
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+    -webkit-transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -o-transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.podcast-box {display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px;}
+
+@media only screen and (max-width: 768px){
+    .swiper-pagination {margin: -18px 0;}
+    .podcast-box {grid-template-columns: 1fr;}
+    .swiper-pagination-bullet {padding: 2px; margin: 0 3px;}
+    .newsbox-small .news-item, .newsbox-thumb.-small .news-item {padding: 0; border-top: solid 0px #666;}
+    .grid-3block .alm-reveal,
+    .grid-related-stories, .grid-pop, .grid-3block-single {grid-template-columns: 1fr 1fr; grid-row-gap: 0;}
+    .newsbox-small .news-item .caption, .newsbox-thumb.-small .news-item .caption,
+    .newsbox-small .news-item .thumb, .newsbox-thumb.-small .news-item .thumb {width: 100%; margin-bottom: 5px;}
+    .newsbox-small .news-item .caption, .newsbox-thumb.-small .news-item .caption {padding: 0;}
+}
+
+/*CSS NEW LAYOUT V2*/
+    .iframeWrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        padding-top: 25px;
+        height: auto;
+    }
+    .iframeWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .date-box {
+        display: block; padding: 10px 0; width: 100%; max-width: 160px; margin: 1em auto 0.3em;
+        font: 300 normal 2rem/1 'Kanit'; color: #000; text-align: center;
+        box-shadow: rgba(0, 0, 0, 0.14) 0px 2px 2px 0px,
+                    rgba(0, 0, 0, 0.2) 0px 1px 1px 0px,
+                    rgba(0, 0, 0, 0.12) 0px 1px 5px 0px;
+    }
+
+    .headline-box {display: grid; grid-template-columns: 1fr auto 1fr; grid-gap: 3px; padding-top: 1em;}
+    .headline-line {border-top: 2px solid #444; margin-top: 22px;}
+    .headline-country {font: 500 normal 2rem/1 'Kanit'; background-color: #000; color: #FFF; padding: 12px 40px;}
+
+    iframe#thestandard-covid19 {min-height: 1900px;}
+    iframe#chart-coronavirus {min-height: 1000px;}
+    
+    /*.iframe-box {position: relative;}*/
+    .credit-box {display: block; background-color: #000; padding: 20px 0;
+    font: 300 normal 1.45rem/1 'Kanit'; color: #FFF; text-align: center; width: 100%;}
+    .credit-box b {color: #FFF; font-weight: 500;}
+    .credit-box a {color: #FFF; text-transform: uppercase;}
+
+    @media only screen and (max-width: 480px){
+        .tabbar {font: 900 normal 2.2rem/1.2 'Kanit'; letter-spacing: 0;}
+        .tabbar-logo {max-width: 60px; margin-top: -53px; margin-left: 0;}
+        .date-box {font: 300 normal 1.5rem/1.2 'Kanit'; max-width: 140px; padding: 8px 0;}
+
+        iframe#thestandard-covid19 {min-height: 2280px;}
+        iframe#chart-coronavirus {min-height: 360px;}
+
+        /*.iframe-box {margin-left: -20px; margin-right: -20px;}*/
+        .headline-line {margin-top: 20px;}
+        .headline-country {padding: 10px 30px;}
+
+        .credit-box {bottom: 0.5%; padding-left: 5px; padding-right: 5px; font: 300 normal 1.45rem/1.2 'Kanit';}
+    }
+
+</style>
+</head>
+<body>
+<div class="bg-coronavirus">
+    <scroll-container>
+        <div class="slide-container">
+            <div class="tabbar">
+                <span>สถิติผู้เสียชีวิตและผู้ติดเชื้อ<br>โควิด-19 ล่าสุด</span>
+                <div class="container">
+                    <div class="tabbar-logo">
+                        <img src="https://thestandard.co/wp-content/uploads/2020/03/logo-covid19.png" width="100%" alt="#ฝ่าวิกฤตโควิด19" title="#ฝ่าวิกฤตโควิด19">
+                    </div>
+                </div>
+            </div>
+            <?php
+                function DateThai($strDate){
+                    $strYear = date("Y",strtotime($strDate))+543;
+                    $strMonth= date("n",strtotime($strDate));
+                    $strDay= date("j",strtotime($strDate));
+
+                    $strMonthCut = Array("","มกราคม","กุมภาพันธ์","มีนาคม","เมษายน","พฤษภาคม","มิถุนายน","กรกฎาคม","สิงหาคม","กันยายน","ตุลาคม","พฤศจิกายน","ธันวาคม");
+                    $strMonthThai=$strMonthCut[$strMonth];
+                    return "$strDay $strMonthThai $strYear";
+                }
+
+                $strDate = date("Y-m-d"); // 2008-08-14
+            ?>
+            <!-- <div class="date-box"><?php echo DateThai($strDate);?></div> -->
+
+            <scroll-page id="div-1">
+                <!-- <div class="container">
+                    <div class="headline-box">
+                        <div class="headline-line"></div>
+                        <div class="headline-country">ประเทศไทย</div>
+                        <div class="headline-line"></div>
+                    </div>
+                </div>
+                <div class="container" style="overflow: hidden;">
+                    <iframe id="thestandard-covid19" width="100%" height="100%" src="http://covid19.th-stat.com/th/share/the_standard" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+                <div class="container">
+                    <div class="headline-box">
+                        <div class="headline-line"></div>
+                        <div class="headline-country">ทั่วโลก</div>
+                        <div class="headline-line"></div>
+                    </div>
+                </div>
+                <div class="hidden-xs">
+                    <iframe id="chart-coronavirus" width="100%" height="100%" src="https://datastudio.google.com/embed/reporting/1US33EpF_v-iKSrtUXCAi8lQRV_j79cIP/page/7SHHB" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+                <div class="visible-xs">
+                    <iframe id="chart-coronavirus" width="100%" height="100%" src="https://datastudio.google.com/embed/reporting/1wnam9VSc-TIGcxQApUXzlhK2O-FBYSyb/page/BIIHB" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div> -->
+                <div class="container">
+                    <div class='tableauPlaceholder' id='viz1585810815914' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Co&#47;CovidCloud&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='CovidCloud&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Co&#47;CovidCloud&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1585810815914');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='927px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+                </div>
+            </scroll-page> <!-- CLOSE #div-1 -->
+        </div>
+
+        <div class="container">
+
+            <scroll-page id="div-3">
+                <header class="headline bdt">อัปเดตสถานการณ์ล่าสุด</header>
+                <section id="coronavirus-latest" class="news-box">
+
+                    <!-- DESKTOP -->
+                    <div class="newsbox-small hidden-xs">
+                        <div class="grid-3block-single">
+                            <?php
+                                $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+                                $args = array(
+                                    'post_status' => "publish",
+                                    'post_type' => array('post','podcast'),
+
+                                    // 'tag' => 'เชื้อไวรัสโคโรนา',
+                                    'tax_query' => array(
+                                        'relation' => 'OR',
+                                        array(
+                                            'taxonomy' => 'post_tag',
+                                            'field' => 'slug',
+                                            'terms' => 'เชื้อไวรัสโคโรนา'
+                                        ),
+                                        array(
+                                            'taxonomy' => 'podcast_tag',
+                                            'field' => 'slug',
+                                            'terms' => 'เชื้อไวรัสโคโรนา'
+                                        )
+                                    ),
+
+                                    'posts_per_page' => 18,
+                                    'orderby' => 'DATE',
+                                    'order' => 'DESC',
+                                    'paged' => $paged
+                                    );
+                                    $postAjax = new WP_query($args);
+                                    if($postAjax->have_posts()) :
+                                        while($postAjax->have_posts()) : $postAjax->the_post();
+                                            include(get_template_directory()."/content-parts/content-ajax.php");
+                                        endwhile;
+                                    else:
+                                    endif; wp_reset_postdata();
+                            ?>   
+                        </div><!-- grid-3block-single -->
+                        <div class="grid-3block">
+                            <?php
+                                // Load More
+                                $loadmore_type = "category-coronavirus-custom";
+                                $coronavirus_current = "coronavirus-latest-desktop";
+                                include(get_template_directory()."/content-parts/loadmore-post.php");
+                            ?>
+                        </div>                        
+                    </div><!-- newsbox-small -->
+                    <!-- MOBILE -->
+                    <div class="newsbox-small visible-xs">
+                        <div class="grid-3block-single">
+                            <?php
+                                $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+                                $args = array(
+                                    'post_status' => "publish",
+                                    'post_type' => array('post','podcast'),
+                                    
+                                    // 'tag' => 'เชื้อไวรัสโคโรนา',
+                                    'tax_query' => array(
+                                        'relation' => 'OR',
+                                        array(
+                                            'taxonomy' => 'post_tag',
+                                            'field' => 'slug',
+                                            'terms' => 'เชื้อไวรัสโคโรนา'
+                                        ),
+                                        array(
+                                            'taxonomy' => 'podcast_tag',
+                                            'field' => 'slug',
+                                            'terms' => 'เชื้อไวรัสโคโรนา'
+                                        )
+                                    ),
+
+                                    'posts_per_page' => 8,
+                                    'orderby' => 'DATE',
+                                    'order' => 'DESC',
+                                    'paged' => $paged
+                                    );
+                                    $postAjax = new WP_query($args);
+                                    if($postAjax->have_posts()) :
+                                        while($postAjax->have_posts()) : $postAjax->the_post();
+                                            include(get_template_directory()."/content-parts/content-ajax.php");
+                                        endwhile;
+                                    else:
+                                    endif; wp_reset_postdata();
+                            ?>   
+                        </div><!-- grid-3block-single -->
+                        <div class="grid-3block">
+                            <?php
+                                // Load More
+                                $loadmore_type = "category-coronavirus-custom";
+                                $coronavirus_current = "coronavirus-latest-mobile";
+                                include(get_template_directory()."/content-parts/loadmore-post.php");
+                            ?>
+                        </div>                        
+                    </div><!-- newsbox-small -->
+                </section>
+            </scroll-page> <!-- CLOSE #div-3 -->
+
+
+
+
+
+            <!-- FOLLOW US + MEMBERSHIP -->
+            <?php
+                $device_detect = "desktop"; $followus = "";
+                include(get_template_directory()."/content-parts/follow-us.php");
+            ?>
+        </div><!-- container -->
+    </scroll-container>
+</div><!-- bg-coronavirus -->
+
+<!-- <div class="credit-box">
+    เว็บไซต์นี้เป็นการร่วมมือกันระหว่าง <b>สำนักข่าว THE STANDARD</b> , <a href="http://www.kidkarnmai.com/?frm=thestandard" target="_blank">www.kidkarnmai.com</a> และ <a href="https://smilehost.asia/?frm=thestandard" target="_blank">www.smilehost.asia</a> โดยอ้างอิงข้อมูลจากกรมควบคุมโรค กระทรวงสาธารณสุข
+</div> -->
+
+
+<!-- <style type="text/css">
+nav.menu-footer, scroll-container {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+nav.menu-footer {
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    width: 100%;
+    padding: 8px;
+    background-color: rgba(172,172,172,.8);
+    display: grid; grid-template-columns: 1fr 1fr 1fr; grid-gap: 5px;
+}
+nav.menu-footer a {
+    font: 500 normal 1.5rem/1 'Kanit'; color: 444;
+    background-color: rgba(255,255,255,.9); padding: 5px 0; border-radius: 5px;
+}
+nav.menu-footer a img {width: 100%; max-width: 28px;}
+
+scroll-container {
+  display: block;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+scroll-page {
+  /*display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 5em;*/
+}
+</style> -->
+
+
+<!-- <nav class="menu-footer">
+    <a href="#div-1">สถิติ<br><img src="https://thestandard.co/wp-content/uploads/2020/03/icon-div1.png" width="100%"></a>
+    <a href="#div-2">คู่มือป้องกันโควิด-19<br><img src="https://thestandard.co/wp-content/uploads/2020/03/icon-div2.png" width="100%"></a>
+    <a href="#div-3">ข่าวล่าสุด<br><img src="https://thestandard.co/wp-content/uploads/2020/03/icon-div3.png" width="100%"></a>
+</nav> -->
+</body>

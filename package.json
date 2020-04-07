@@ -1,0 +1,28 @@
+{
+  "name": "test-gps-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anunphop/test-gps-web.git"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "author": "Pattana Anunphop",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anunphop/test-gps-web/issues"
+  },
+  "homepage": "https://github.com/anunphop/test-gps-web#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "gps": "^0.5.3",
+    "path": "^0.12.7"
+  }
+}
